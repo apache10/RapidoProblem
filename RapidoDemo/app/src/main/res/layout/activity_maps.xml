@@ -1,8 +1,62 @@
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.gauravgupta.rapidodemo.MapsActivity" />
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:weightSum="1" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="2dp"
+            android:background="@drawable/background_b">
+
+            <AutoCompleteTextView
+                android:id="@+id/txt_source"
+                android:hint="Enter origin address"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:maxLines="1" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="2dp"
+            android:background="@drawable/background_b">
+
+            <AutoCompleteTextView
+                android:id="@+id/txt_destination"
+                android:hint="Enter Destination address"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:maxLines="1" />
+
+        </android.support.design.widget.TextInputLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Find Path"
+            android:textColor="#ffffff"
+            android:id="@+id/RideNow"
+            android:layout_gravity="center_horizontal"
+            android:background="#3a4148"
+            android:onClick="onPathFind"
+            android:gravity="center"/>
+    </LinearLayout>
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        tools:context="com.example.gauravgupta.rapidodemo.MapsActivity" />
+
+    </LinearLayout>

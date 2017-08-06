@@ -65,7 +65,7 @@ public class DirectionFinder {
         String urlDestination = URLEncoder.encode(destination, "utf-8");
         Log.d("Dude","Creating the URL");
 
-        return DIRECTION_URL_API + "origin=" + urlOrigin + "&destination=" + urlDestination + "&alternatives=true" + "&mode=bus" + "&key=" + GOOGLE_API_KEY;
+        return DIRECTION_URL_API + "origin=" + urlOrigin + "&destination=" + urlDestination + "&alternatives=true" + "&mode=driving" + "&key=" + GOOGLE_API_KEY;
     }
 
 
